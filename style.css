@@ -51,7 +51,7 @@ header input:focus{
 
 ul{
     list-style: none;
-    max-height: 400px;
+    height: 400px;
     overflow-y: auto;
 }
 

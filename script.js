@@ -26,4 +26,19 @@ async function getUsers(){
     updateDom(results)
 }
 
+function searchUser(searchTerm){
+    listItems.forEach(item=>{
+        let name=item.children[1].children[0].innerText.toLowerCase()
+        if (name.includes(searchTerm.toLowerCase())){
+            item.classList.remove('hide')
+        }else{
+            item.classList.add('hide')
+        }
+    })
+}
+
+searchInput.addEventListener('input',(e)=>{
+    searchUser(e.target.value)
+})
+
 getUsers()
